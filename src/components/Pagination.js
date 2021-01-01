@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 export class Pagination extends Component {
     render() {
-        const { postsPerPage, totalPosts, paginate, nextPage, prevPage } = this.props;
+        const { postsPerPage, totalPosts, paginate,currentPage,nextPage, prevPage } = this.props;
 
         const pageNumbers = [];
 
@@ -17,7 +17,7 @@ export class Pagination extends Component {
                         <a className="page-link" href="#" onClick={() => prevPage()}>Previous</a>
                     </li>
                     {pageNumbers.map(num => (
-                        <li className="page-item" key={num}>
+                        <li className={num===currentPage? "page-item active" : "page-item" } key={num}>
                             <a onClick={() => paginate(num)} href="#" className="page-link">{num}</a>
                         </li>
                     ))}

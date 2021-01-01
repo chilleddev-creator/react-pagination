@@ -40,7 +40,7 @@ export class App extends Component {
       <div className="container">
         <h1 className="my-5 text-primary text-center">React Pagination</h1>
         <Posts posts={currentPosts} loading={loading} />
-        <Pagination postsPerPage={postsPerPage} totalPosts={posts.length} paginate={paginate} nextPage={nextPage} prevPage={prevPage} />
+        <Pagination postsPerPage={postsPerPage} totalPosts={posts.length} paginate={paginate} currentPage ={currentPage} nextPage={nextPage} prevPage={prevPage} />
       </div>
     )
   }
